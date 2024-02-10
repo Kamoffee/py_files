@@ -11,8 +11,8 @@ languages = [
     ['Perl', 1987],
 ]
 
-with open('test.json', 'w', encoding='utf-8') as testfile:
-    json.dump(languages, testfile)
+# with open['test.json', 'w', encoding='utf-8'] as testfile:
+#     json.dump[languages, testfile]
 
 with open('test.json', 'r', encoding='utf-8') as testfile:
     data = json.load(testfile)

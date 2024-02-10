@@ -1,8 +1,12 @@
 import json
+import urllib.request
 
-temperatures = "temperature_anomaly.json"
-with open(temperatures, encoding="utf-8") as data:
-    anomalies = json.load(data)
+
+temperatures = "https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/global/time-series/globe/land_ocean/1/12/1850-2023/data.json"
+
+with urllib.request.urlopen(temperatures) as json_stream:
+    data = json_stream.read().decode('utf-8')
+    anomalies = json.loads(data)
 
 print(anomalies['description'])
 

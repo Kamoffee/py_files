@@ -1,7 +1,7 @@
 import json
 
-temperature = "temperature_anomaly.json"
-with open(temperature, encoding="utf-8") as data:
+temperatures = "temperature_anomaly.json"
+with open(temperatures, encoding="utf-8") as data:
     anomalies = json.load(data)
 
 print(anomalies['description'])
